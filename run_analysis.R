@@ -52,3 +52,5 @@ merged_data_with_desc <- merge(act_label,merged_data)
 merged_data_with_desc %>% group_by(subject, activity) %>% 
 summarise_all(mean)
 
+#creating output
+write.table(final_dataset, row.names = FALSE, "project_submission.txt")
